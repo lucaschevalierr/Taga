@@ -1,0 +1,13 @@
+{% extends 'notation/profile.html' %}
+
+{% block content %}
+        <form class="profil" action="{% url 'notation-postProfile' %}" method="post">
+            <h1>Information du compte</h1>
+            {% csrf_token %}
+            <p><b>Nom : </b><input type="text" name="last_name" placeholder="{{ last_name }}"></p>
+            <p><b>Prenom : </b><input type="text" name="first_name" placeholder="{{ first_name }}"></p>
+            <p><b>eMail : </b><input type="text" name="email" placeholder="{{ email }}"></p>
+            <p><b>Nom d'utilisateur : </b><input type="text" name="username" placeholder="{{ username }}"></p>
+            <input class="btn" type="submit" value="Validez">
+        </form>
+{% endblock %}
