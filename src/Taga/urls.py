@@ -24,6 +24,7 @@ urlpatterns = [
     path('error/', server_error, name="error"),
 
     path('', index, name="index"),
+
     path('notation/', include("notation.urls")),
     path('user/', include("user.urls")),
 ]
