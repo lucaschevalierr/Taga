@@ -9,6 +9,7 @@ Le projet est un site permettant d’évaluer notre journée selon pusieurs crit
 Vous pouvez vous inscrire si vous voulez avoir votre compte personnel et renseigner vos propre notes  ou vous pouvez vous connecter avec mon compte si vous voulez voir des statistiques plus complètes et détaillées (parce qu’il y a plus de notes sur mon compte) : 
 
 **Identifiant :** fedope
+
 **Mot de passe :** lulu070801
 
 Une fois votre compte créé vous pouvez attribuer une note aux différentes catégories présentes à l’écran, une fois la note enregistré vous avez votre profil, qui vous permet de voir vos dernières notes ainsi qu’un graphique avec la moyenne de chaques catégories depuis la création de votre compte ainsi que le nombre de notes que vous avez attribués. 
