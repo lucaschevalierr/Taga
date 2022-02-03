@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 import os.path
 from pathlib import Path
 import environ
+import django_heroku
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 import notation
@@ -133,3 +135,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = '/notation'
 LOGIN_URL = '/user/login'
 
+django_heroku.settings(locals())
