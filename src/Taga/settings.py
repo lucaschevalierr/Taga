@@ -11,24 +11,24 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os.path
 from pathlib import Path
+from pathlib import Path
 import environ
-import django_heroku
-
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 import notation
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-env = environ.Env()
-environ.Env.read_env(env_file=str(BASE_DIR / "Taga" / ".env"))
-
-SECRET_KEY = env("SECRET_KEY")
-DEBUG = env.bool("DEBUG")
-ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
+
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = 'django-insecure-5rl5_o$3%odlsw9^h&y2-fe4wnf7$(mj^rlbrmg=_+n9y!lt(j'
+
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = False
+
+ALLOWED_HOSTS = ['tagaa.herokuapp.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -135,4 +135,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = '/notation'
 LOGIN_URL = '/user/login'
 
-django_heroku.settings(locals())
