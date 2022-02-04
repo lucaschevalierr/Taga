@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os.path
 from pathlib import Path
-from pathlib import Path
+import django_heroku
 import environ
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-5rl5_o$3%odlsw9^h&y2-fe4wnf7$(mj^rlbrmg=_+n9y!lt(j'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ['tagaa.herokuapp.com', 'localhost', '127.0.0.1']
 
 
@@ -130,7 +130,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
 # authentification
 LOGIN_REDIRECT_URL = '/notation'
 LOGIN_URL = '/user/login'
 
+
+django_heroku.settings(locals())
