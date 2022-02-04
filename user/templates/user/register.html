@@ -1,0 +1,20 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscription</title>
+    <link rel="stylesheet" href="{% static 'css/login_register.css' %}">
+
+</head>
+<body>
+    <form class="register" method="post">
+         <h1>S'inscrire</h1>
+        {% csrf_token %}
+        {{ form}}
+        <input class="btn" type="submit" value="S'inscrire">
+    </form>
+    <p>Si vous avez déjà un compte, <a href="{% url 'user-login' %}">se connecter</a></p>
+</body>
+</html>
