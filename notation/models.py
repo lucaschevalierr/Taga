@@ -6,12 +6,11 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 class NotesCategories(models.Model):
-    title = models.CharField(max_length=10, default='categoriesTitle')
+    title = models.CharField(max_length=12, default='categoriesTitle')
 
 
 class NotationTable(models.Model):
     date = models.DateField("Date", default=datetime.today)
-    id = models.IntegerField(primary_key=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def save(self, *agrs, **kwargs):
