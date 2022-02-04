@@ -1,1 +1,1 @@
-web: gunicorn tagaa.wsgi
+web: gunicorn Taga.wsgi
