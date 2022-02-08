@@ -109,11 +109,11 @@ def post_note(request, *args, **kwargs):
         notationTable.save()
 
         idNotationtable = NotationTable.objects.get(user=request.user, date=date.today())
-
+        print(request.POST)
         for categorie in NotesCategories.objects.all():
             note = Note()
             note.valeur = request.POST.get(categorie.title)
-
+            print(note.valeur)
             note.table = idNotationtable
 
             note.categories = categorie
