@@ -114,6 +114,11 @@ def post_note(request, *args, **kwargs):
 
         for categorie in NotesCategories.objects.all():
             note = Note()
+
+            print(note.id)
+            note.id = note.id + 1
+            print(note.id)
+
             note.valeur = request.POST.get(categorie.title)
             print(note.valeur)
             note.table = idNotationtable
