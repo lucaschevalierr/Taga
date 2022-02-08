@@ -106,13 +106,14 @@ def post_note(request, *args, **kwargs):
         notationTable = NotationTable()
         print(notationTable)
 
-        print(notationTable.user)
         print(request.user)
         notationTable.user = request.user
+        print(notationTable.user)
 
-        print(notationTable.date)
+
         print(date.today())
         notationTable.date = date.today()
+        print(notationTable.date)
 
         notationTable.save()
 
