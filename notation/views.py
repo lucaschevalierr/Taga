@@ -126,7 +126,6 @@ def post_note(request, *args, **kwargs):
 
 @login_required
 def profile_modif(request):
-    # moyenne de toute les note
 
     # pour récupérer les notes des jours passé
 
