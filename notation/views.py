@@ -104,17 +104,9 @@ def post_note(request, *args, **kwargs):
 
 
         notationTable = NotationTable()
-        print(notationTable)
 
-        print(request.user)
         notationTable.user = request.user
-        print(notationTable.user)
-
-
-        print(date.today())
         notationTable.date = date.today()
-        print(notationTable.date)
-
         notationTable.save()
 
         idNotationtable = NotationTable.objects.get(user=request.user, date=date.today())

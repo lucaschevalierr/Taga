@@ -18,7 +18,7 @@ class NotationTable(models.Model):
         return self
 
 class Note(models.Model):
-    id = models.IntegerField(primary_key=True)
+    id = models.AutoField(primary_key=True)
     table = models.ForeignKey(NotationTable, on_delete=models.CASCADE)
     valeur = models.IntegerField()
     categories = models.ForeignKey(NotesCategories, on_delete=models.PROTECT)
