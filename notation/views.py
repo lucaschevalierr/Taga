@@ -102,14 +102,23 @@ def profile(request):
 def post_note(request, *args, **kwargs):
     if not NotationTable.objects.filter(user=request.user, date=date.today()):
 
+
         notationTable = NotationTable()
+        print(notationTable)
+
+        print(notationTable.user)
+        print(request.user)
         notationTable.user = request.user
+
+        print(notationTable.date)
+        print(date.today())
         notationTable.date = date.today()
 
         notationTable.save()
 
         idNotationtable = NotationTable.objects.get(user=request.user, date=date.today())
         print(request.POST)
+
         for categorie in NotesCategories.objects.all():
             note = Note()
             note.valeur = request.POST.get(categorie.title)
