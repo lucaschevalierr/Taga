@@ -17,3 +17,5 @@ Une fois votre compte créé vous pouvez attribuer une note aux différentes cat
 Vous ne pouvez mettre qu’une seuls note par jour, donc si vous essayer d’accéder à la page de notation vous serrez automatiquement redirigé vers votre profil.
 
 Vous pouvez modifier votre profil comme bon vous semble, si vous avez renseigné une mauvaise adresse mail ou un mauvais identifiant vous pouvez tout changer.
+
+Voici le lien du site du projet: https://tagaa.herokuapp.com/user/login/ 
