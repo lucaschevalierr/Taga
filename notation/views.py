@@ -53,10 +53,12 @@ def profile(request):
     notes = []
     length_notes = NotationTable.objects.filter(user=request.user).count()
     moyennes = []
-
-    for noteTable in NotationTable.objects.filter(date__gt=(date.today() - timedelta(days=11)), user=request.user).order_by("-date"):
+    for noteTable in NotationTable.objects.filter(date__gt=(date.today() - timedelta(days=30)), user=request.user).order_by("-date"):
         moyennes.append(note_jours(noteTable))
 
+    moyennesTabs = []
+    for i in range(0, 11):
+        moyennesTabs.append(moyennes[i])
 
     moyenne_productivity = 0
     moyenne_mood = 0
@@ -87,7 +89,7 @@ def profile(request):
         "last_name": request.user.last_name,
         "email": request.user.email,
         "note_jours": notes,
-        "moyennes": moyennes,
+        "moyennes": moyennesTabs,
         "nb_notes": length_notes,
         "moyenne_productivity": moyenne_productivity,
         "moyenne_mood": moyenne_mood,
@@ -134,10 +136,12 @@ def profile_modif(request):
     notes = []
     length_notes = NotationTable.objects.filter(user=request.user).count()
     moyennes = []
-
-    for noteTable in NotationTable.objects.filter(date__gt=(date.today() - timedelta(days=11)), user=request.user).order_by("-date"):
+    for noteTable in NotationTable.objects.filter(date__gt=(date.today() - timedelta(days=30)),user=request.user).order_by("-date"):
         moyennes.append(note_jours(noteTable))
 
+    moyennesTabs = []
+    for i in range(0,11):
+        moyennesTabs.append(moyennes[i])
 
     moyenne_productivity = 0
     moyenne_mood = 0
@@ -168,7 +172,7 @@ def profile_modif(request):
         "last_name": request.user.last_name,
         "email": request.user.email,
         "note_jours": notes,
-        "moyennes": moyennes,
+        "moyennes": moyennesTabs,
         "nb_notes": length_notes,
         "moyenne_productivity": moyenne_productivity,
         "moyenne_mood": moyenne_mood,
