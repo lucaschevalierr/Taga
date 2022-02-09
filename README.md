@@ -19,3 +19,5 @@ Vous ne pouvez mettre qu’une seuls note par jour, donc si vous essayer d’acc
 Vous pouvez modifier votre profil comme bon vous semble, si vous avez renseigné une mauvaise adresse mail ou un mauvais identifiant vous pouvez tout changer.
 
 Voici le lien du site du projet: https://tagaa.herokuapp.com/ 
+
+Je précise au cas où, la base de données du site en ligne contient exactement la même structure mais pas exactement les mêmes données que celle présente dans le fichier 
