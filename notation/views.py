@@ -57,8 +57,12 @@ def profile(request):
         moyennes.append(note_jours(noteTable))
 
     moyennesTabs = []
-    for i in range(0, 11):
-        moyennesTabs.append(moyennes[i])
+    if length_notes < 11:
+        for i in range(0, length_notes):
+            moyennesTabs.append(moyennes[i])
+    else:
+        for i in range(0, 11):
+            moyennesTabs.append(moyennes[i])
 
     moyenne_productivity = 0
     moyenne_mood = 0
@@ -140,8 +144,12 @@ def profile_modif(request):
         moyennes.append(note_jours(noteTable))
 
     moyennesTabs = []
-    for i in range(0,11):
-        moyennesTabs.append(moyennes[i])
+    if length_notes < 11:
+        for i in range(0, length_notes):
+            moyennesTabs.append(moyennes[i])
+    else:
+        for i in range(0, 11):
+            moyennesTabs.append(moyennes[i])
 
     moyenne_productivity = 0
     moyenne_mood = 0
