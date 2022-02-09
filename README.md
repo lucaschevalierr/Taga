@@ -18,5 +18,6 @@ Vous ne pouvez mettre qu’une seule note par jour, donc si vous essayer d’acc
 Vous pouvez modifier votre profil comme bon vous semble, si vous avez renseigné une mauvaise adresse mail ou un mauvais identifiant vous pouvez tout changer.
 
 Voici le lien du site du projet : https://tagaa.herokuapp.com/
+Voici le lien du github : https://github.com/lucaschevalierr/Taga (la branche heroku est la dernière banche à jours, car c'est sur elle que j'ai fait mes modifications pour pouvoir publier le site avec heroku)
 
 Je précise au cas où, la base de données du site en ligne contient exactement la même structure, mais pas exactement les mêmes données que celle présente dans le fichier
